@@ -1,0 +1,76 @@
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Hamburger Button */
+.nav-toggle {
+  display: none;
+  padding: 0.5rem;
+  z-index: 1100;
+}
+
+.nav-toggle:hover {
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Stagger middle span left */
+.nav-toggle span:nth-child(2) {
+  transform: translateX(-6px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* When open, animate to "X" */
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-6px);
+}
+
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    will-change: max-height;
+    box-shadow: var(--box-shadow);
+  }
+
+  .nav.open {
+    max-height: 500px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+}

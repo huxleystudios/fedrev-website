@@ -1,0 +1,42 @@
+/* Small text: fixed for readability */
+.text--size-sm {
+  font-size: 0.875rem; /* 14px */
+}
+
+/* Medium text: standard body size */
+.text--size-md {
+  font-size: 1rem; /* 16px */
+}
+
+/* Large text: responsive (22px–24px) */
+.text--size-lg {
+  font-size: clamp(1.375rem, 1.5vw + 0.25rem, 1.5rem);
+}
+
+/* Extra-large text: responsive 56px–80px */
+.text--size-xl {
+  font-size: clamp(3.5rem, 6vw + 1rem, 5rem);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.text--logo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--color-primary {
+  color: var(--color-primary);
+}
+
+.text--color-accent {
+  color: var(--color-accent);
+}
+
+.text--bold {
+  font-weight: bold;
+}

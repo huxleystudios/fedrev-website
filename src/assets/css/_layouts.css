@@ -1,0 +1,78 @@
+.section {
+  min-height: 90vh;
+  padding-block: 4rem 6rem;
+  padding-inline: clamp(1rem, 5vw, 3rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.section--color-primary {
+  background-image: linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      rgba(236, 248, 255, 0.8) 15%,
+      var(--color-section-bg) 40%,
+      var(--color-section-bg) 60%,
+      rgba(236, 248, 255, 0.8) 85%,
+      #ffffff 100%
+    ),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" ><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" stitchTiles="stitch" /></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.05" /></svg>');
+
+  background-repeat: repeat;
+  background-size: auto, 20px 20px;
+}
+
+.section.hero {
+  background-image: linear-gradient(
+      to bottom,
+      var(--color-section-bg) 0%,
+      rgba(236, 248, 255, 0.9) 30%,
+      rgba(255, 255, 255, 0.7) 70%,
+      #ffffff 100%
+    ),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.05"/></svg>');
+
+  background-repeat: repeat;
+  background-size: auto, 20px 20px;
+}
+
+.section-divider {
+  background: #fff;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+}
+
+/* SIDE BY SIDE LAYOUT */
+
+.side-by-side-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.side {
+  flex: 1 1 calc(50% - 0.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+  /* SIDE BY SIDE LAYOUT */
+
+  .side-by-side-layout {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .side-by-side-layout.reverse {
+    flex-direction: column-reverse;
+  }
+}

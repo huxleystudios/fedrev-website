@@ -1,0 +1,8 @@
+.step-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  text-align: center;
+}

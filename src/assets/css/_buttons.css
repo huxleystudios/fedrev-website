@@ -1,0 +1,11 @@
+.btn {
+  border-radius: 2rem;
+  color: var(--text-color-light);
+  font-weight: bold;
+  padding: 1rem 2rem;
+  width: max-content;
+}
+
+.btn--color-primary {
+  background-color: var(--c-red);
+}

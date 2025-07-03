@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "title": "Stress-Free Invoicing for Federal Contractors",
+    "description": "We work behind the scenes to keep your invoicing compliant, your payments on track, and your focus on what you do best.",
+    "cta": "Get Started"
+  },
+  "header": {
+    "logo": "FEDREV",
+    "nav": [
+      {
+        "label": "About Us",
+        "link": "#about"
+      },
+      {
+        "label": "Our Services",
+        "link": "#services"
+      },
+      {
+        "label": "Contact Us",
+        "link": "#contact"
+      },
+      {
+        "label": "Get Started",
+        "link": "#contact"
+      }
+    ]
+  },
+  "about": {
+    "title": "Keep Your Business Moving",
+    "description": "Our mission is simple—make life easier for federal contractors. We manage your invoicing workflows and compliance headaches, so you can focus on delivering great work and winning more contracts, not chasing down payments.",
+    "steps": [
+      {
+        "title": "NOTIFY US",
+        "description": "Send us an update when the job is done"
+      },
+      {
+        "title": "SIT BACK AND RELAX",
+        "description": "We handle everything from compliance to follow-up"
+      },
+      {
+        "title": "GET PAID",
+        "description": "No delays. No errors. Just fast, accurate payments"
+      }
+    ]
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Full support, for less than a full-time hire. Think of us as your secret invoicing department.",
+    "list": [
+      {
+        "title": "Invoicing Submissions",
+        "description": "We enter and submit invoices directly into WAWF or other required portals, ensuring accuracy, compliance, and timely processing."
+      },
+      {
+        "title": "Invoicing Tracking",
+        "description": "We monitor invoice status across all stages—submission, acceptance, approval, and payment—so nothing falls through the cracks."
+      },
+      {
+        "title": "Reporting",
+        "description": "We deliver clear, customized reports that give you visibility into submitted, pending, and paid invoices—plus trends and payment timelines."
+      },
+      {
+        "title": "Liaison Support",
+        "description": "   We communicate with CORs, DFAS, and payment offices on your behalf to resolve issues, follow up on delays, and keep payments moving."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Take the First Step",
+    "description": "Stress-free invoicing is one message away."
+  },
+  "invoices": {
+    "label": "✔ Invoice Paid -",
+    "amounts": ["$12,500", "$8,200", "$19,000"]
+  }
+}

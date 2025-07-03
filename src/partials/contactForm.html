@@ -1,0 +1,36 @@
+<form
+  class="flex flex-column gap-sm contact-item animate-in"
+  action="https://formspree.io/f/mblypjkp"
+  method="POST"
+  autocomplete="off"
+  novalidate
+>
+  <fieldset class="flex flex-column gap-sm">
+    <legend>Contact Information</legend>
+
+    <div class="flex flex-column gap-sm">
+      <label for="name">Name</label>
+      <input id="name" type="text" name="name" required />
+    </div>
+
+    <div class="flex flex-column gap-sm">
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required />
+    </div>
+
+    <div class="flex flex-column gap-sm">
+      <label for="businessName">Business Name</label>
+      <input id="businessName" type="text" name="businessName" required />
+    </div>
+  </fieldset>
+
+  <fieldset class="flex flex-column gap-sm">
+    <legend>Message</legend>
+
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </fieldset>
+
+  <button type="submit" class="btn btn--color-primary">
+    <span class="text--size-md">Send</span>
+  </button>
+</form>

@@ -1,0 +1,5 @@
+footer {
+  background-color: var(--color-accent);
+  color: var(--text-color-light);
+  padding: clamp(0.5rem, 2vw, 1.5rem) clamp(1rem, 5vw, 3rem);
+}
