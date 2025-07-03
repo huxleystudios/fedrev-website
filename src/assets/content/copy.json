@@ -30,29 +30,29 @@
     "description": "Our mission is simple—make life easier for federal contractors. We manage your invoicing workflows and compliance headaches, so you can focus on delivering great work and winning more contracts, not chasing down payments.",
     "steps": [
       {
-        "title": "NOTIFY US",
-        "description": "Send us an update when the job is done"
+        "title": "Notify Us",
+        "description": "Send us an update when the job is done."
       },
       {
-        "title": "SIT BACK AND RELAX",
-        "description": "We handle everything from compliance to follow-up"
+        "title": "Sit Back and Relax",
+        "description": "We handle everything from compliance to follow-up."
       },
       {
-        "title": "GET PAID",
-        "description": "No delays. No errors. Just fast, accurate payments"
+        "title": "Get Paid",
+        "description": "No delays. No errors. Just fast, accurate payments."
       }
     ]
   },
   "services": {
     "title": "Our Services",
-    "description": "Full support, for less than a full-time hire. Think of us as your secret invoicing department.",
+    "description": "Full support—for less than a full-time hire. Think of us as your secret invoicing department.",
     "list": [
       {
-        "title": "Invoicing Submissions",
+        "title": "Invoice Submissions",
         "description": "We enter and submit invoices directly into WAWF or other required portals, ensuring accuracy, compliance, and timely processing."
       },
       {
-        "title": "Invoicing Tracking",
+        "title": "Invoice Tracking",
         "description": "We monitor invoice status across all stages—submission, acceptance, approval, and payment—so nothing falls through the cracks."
       },
       {
@@ -61,7 +61,7 @@
       },
       {
         "title": "Liaison Support",
-        "description": "   We communicate with CORs, DFAS, and payment offices on your behalf to resolve issues, follow up on delays, and keep payments moving."
+        "description": "We communicate with CORs, DFAS, and payment offices on your behalf to resolve issues, follow up on delays, and keep payments moving."
       }
     ]
   },
@@ -70,7 +70,7 @@
     "description": "Stress-free invoicing is one message away."
   },
   "invoices": {
-    "label": "✔ Invoice Paid -",
-    "amounts": ["$12,500", "$8,200", "$19,000"]
+    "label": "| Invoice Paid ✅",
+    "amounts": ["+$12,500", "+$8,200", "+$19,000"]
   }
 }
