@@ -18,13 +18,15 @@ export const initNavToggleOnClick = () => {
 
         const href = link.getAttribute("href");
 
+        // Remove open classes to trigger close animation
         nav.classList.remove("open");
+        navToggle.classList.remove("open");
         navToggle.setAttribute("aria-expanded", false);
 
-        // Delay navigation to allow closing animation (adjust time as needed)
+        // Wait for closing animation to finish, then navigate
         setTimeout(() => {
           window.location.href = href;
-        }, 300); // 300ms is a common transition time
+        }, 300); // Adjust to match your CSS transition duration
       }
     });
   });
