@@ -10,12 +10,21 @@ export const initNavToggleOnClick = () => {
     navToggle.setAttribute("aria-expanded", isOpen);
   });
 
-  // Close nav when link is clicked (mobile)
+  // Close nav when link is clicked (mobile), then navigate
   navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (e) => {
       if (nav.classList.contains("open")) {
+        e.preventDefault(); // Stop immediate navigation
+
+        const href = link.getAttribute("href");
+
         nav.classList.remove("open");
         navToggle.setAttribute("aria-expanded", false);
+
+        // Delay navigation to allow closing animation (adjust time as needed)
+        setTimeout(() => {
+          window.location.href = href;
+        }, 300); // 300ms is a common transition time
       }
     });
   });
