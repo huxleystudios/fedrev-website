@@ -120,6 +120,34 @@ function compileCSSBundleWithHash(inputCssFile) {
 }
 
 // ----------------------------------
+// 🎨 JS Bundling & Minification
+// ----------------------------------
+
+function minifyJS(js) {
+  return js
+    .replace(/\/\/[^\n]*/g, "") // Remove single-line comments
+    .replace(/\s+/g, " ") // Collapse whitespace
+    .replace(/\s*([{}();,:=+])\s*/g, "$1") // Remove space around symbols
+    .trim();
+}
+
+function compileJSBundleWithHash(inputJsFile) {
+  const inputPath = path.join(ASSETS_DIR, "js", inputJsFile);
+  const jsContent = fs.readFileSync(inputPath, "utf8");
+  const minifiedJs = minifyJS(jsContent);
+
+  const hash = getContentHash(minifiedJs);
+  const outputFileName = `bundle.${hash}.js`;
+  const outputPath = path.join(PUBLIC_DIR, "js", outputFileName);
+
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, minifiedJs, "utf8");
+  console.log(`📜 JS bundled and minified with hash: ${outputFileName}`);
+
+  return outputFileName;
+}
+
+// ----------------------------------
 // 📦 Copy Static Assets
 // ----------------------------------
 
@@ -303,9 +331,13 @@ function timeOperation(name, fn) {
 // ⚙️ Build Steps
 // ----------------------------------
 
-// 1. Bundle and minify CSS, get hashed filename
+// 1. Bundle and minify CSS and JS, get hashed filename
 const hashedCssFile = timeOperation("CSS bundling", () =>
   compileCSSBundleWithHash("main.css")
+);
+
+const hashedJsFile = timeOperation("JS bundling", () =>
+  compileJSBundleWithHash("index.js")
 );
 
 // 2. Copy static assets
@@ -314,6 +346,16 @@ for (const [srcName, destName] of Object.entries(assetFolders)) {
   const destPath = path.join(PUBLIC_DIR, destName);
   copyFolder(assetPath, destPath);
   console.log(`📂 Copied asset folder: ${srcName} → ${destName}`);
+}
+
+const indexJsPath = path.join(PUBLIC_DIR, "js", "index.js");
+
+// Delete the index.js file
+if (fs.existsSync(indexJsPath)) {
+  fs.unlinkSync(indexJsPath);
+  console.log("🗑️ Removed index.js from public/js");
+} else {
+  console.log("ℹ️ index.js not found, nothing to remove");
 }
 
 // 3. Inject dynamic content into partials
@@ -328,6 +370,7 @@ fs.readdirSync(SRC_DIR).forEach((file) => {
     html = html
       .replace("<!-- HEAD -->", partials.head)
       .replace(/\/css\/bundle\.css/, `/css/${hashedCssFile}`)
+      .replace(/\/js\/bundle\.js/, `/js/${hashedJsFile}`)
       .replace("<!-- HEADER -->", partials.headerHTML)
       .replace("<!-- HERO SECTION -->", partials.heroSection)
       .replace("<!-- ABOUT SECTION -->", partials.aboutSection)
@@ -336,7 +379,7 @@ fs.readdirSync(SRC_DIR).forEach((file) => {
       .replace("<!-- FOOTER -->", partials.footerHTML);
 
     // **Remove /public from asset URLs**
-    html = html.replace(/\/public\//g, "/");
+    html = html.replace(/\/public\//g, "./");
 
     const outputPath = path.join(PUBLIC_DIR, file);
     fs.writeFileSync(outputPath, minifyHTML(html));
@@ -346,7 +389,7 @@ fs.readdirSync(SRC_DIR).forEach((file) => {
 });
 
 // 5. Generate sitemap.xml
-const BASE_URL = "https://fedrev.co"; // <-- UPDATE this for your site
+const BASE_URL = "https://fedrev.co";
 const SITEMAP_PATH = path.join(PUBLIC_DIR, "sitemap.xml");
 
 const htmlFiles = fs
@@ -426,6 +469,16 @@ function logFileSize(filePath) {
 }
 
 logFileSize(path.join(PUBLIC_DIR, "css", hashedCssFile));
+
+// ----------------------------------
+// 🌐 Generate CNAME for Custom Domain
+// ----------------------------------
+
+const CNAME_DOMAIN = "fedrev.co";
+const CNAME_PATH = path.join(PUBLIC_DIR, "CNAME");
+
+fs.writeFileSync(CNAME_PATH, CNAME_DOMAIN + "\n", "utf8");
+console.log(`🌐 Created CNAME file with domain: ${CNAME_DOMAIN}`);
 
 // ----------------------------------
 // 🎉 Build Complete!
