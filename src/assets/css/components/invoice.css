@@ -35,26 +35,3 @@
   transform: translateY(-50%);
   animation-delay: 3s;
 }
-
-/* Looping pulse/fade keyframes */
-@keyframes pulseInOut {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  10% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  40% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-}

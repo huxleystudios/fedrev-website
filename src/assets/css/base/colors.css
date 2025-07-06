@@ -1,0 +1,65 @@
+:root {
+  /* Blues */
+  --blue-100: #ebf8ff;
+  --blue-500: #3c507a;
+  --blue-700: #16263e;
+
+  /* Grays */
+  --gray-100: #f8f9fa;
+  --gray-300: #dee2e6;
+  --gray-700: #495057;
+  --gray-900: #212529;
+
+  /* Greens */
+  --green-500: #28a745;
+
+  /* Reds */
+  --red-500: #cf2127;
+
+  /* Other */
+  --white: #ffffff;
+  --black: #000000;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--blue-700);
+}
+
+.bg-primary {
+  background-color: var(--blue-700);
+}
+
+.bg-light {
+  background-color: var(--white);
+}
+
+.bg-gradient-white-blue-white {
+  background-image: linear-gradient(
+    to bottom,
+    var(--white) 0%,
+    rgba(236, 248, 255, 0.8) 15%,
+    var(--blue-100) 40%,
+    var(--blue-100) 60%,
+    rgba(236, 248, 255, 0.8) 85%,
+    var(--white) 100%
+  );
+}
+
+.bg-gradient-blue-white {
+  background-image: linear-gradient(
+    to bottom,
+    var(--blue-100) 0%,
+    rgba(236, 248, 255, 0.9) 30%,
+    rgba(255, 255, 255, 0.7) 70%,
+    var(--white) 100%
+  );
+}
+
+.text-light {
+  color: var(--white);
+}
+
+.text-accent {
+  color: var(--blue-500);
+}

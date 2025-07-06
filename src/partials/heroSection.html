@@ -1,22 +1,42 @@
-<section id="home" class="section hero">
-  <div class="container side-by-side-layout reverse">
-    <div class="side">
-      <img
-        src="/public/img/business-owner.webp"
-        alt="Federal contractor working at project site"
-        class="hero-image hero-item animate-in"
-      />
-      <!-- INVOICES -->
-    </div>
-    <div class="side">
-      <div class="flex flex-column gap-md">
-        <h1 class="text--size-xl text--color-primary hero-item animate-in">
-          {{TITLE}}
-        </h1>
-        <p class="text--size-lg hero-item animate-in">{{DESCRIPTION}}</p>
-        <a href="#contact" class="btn btn--color-primary hero-item animate-in">
-          <span class="text--size-md">{{CTA}}</span></a
-        >
+<section
+  id="home"
+  class="flex items-center justify-center min-h-90vh p-section bg-gradient-blue-white bg-noise"
+  aria-label="Home hero section"
+>
+  <div class="container">
+    <div class="grid grid-col-2 md:grid-col-1 gap-2 grid-wrap-reverse">
+      <div class="flex items-center justify-center">
+        <img
+          src="/public/img/business-owner.webp"
+          alt="Federal contractor working at project site"
+          class="hero-image animate-fade-up"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          data-animate-hero-item
+        />
+        <!-- INVOICES -->
+      </div>
+      <div class="flex items-center justify-center">
+        <div class="flex flex-col gap-15">
+          <h1
+            class="text-xl text-accent animate-fade-up"
+            data-animate-hero-item
+          >
+            {{TITLE}}
+          </h1>
+          <p class="text-lg animate-fade-up" data-animate-hero-item>
+            {{DESCRIPTION}}
+          </p>
+          <a
+            href="#contact"
+            class="btn btn--color-primary animate-fade-up"
+            role="button"
+            data-animate-hero-item
+          >
+            <span class="text-md">{{CTA}}</span></a
+          >
+        </div>
       </div>
     </div>
   </div>

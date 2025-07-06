@@ -189,6 +189,8 @@ const assetFolders = {
 const partialNames = [
   "head",
   "headerHTML",
+  "nav",
+  "hamburgerIcon",
   "heroSection",
   "invoices",
   "aboutSection",
@@ -224,12 +226,20 @@ console.log("📖 Loaded site copy from copy.json");
  * Supports multiple replacements and nested partial injection.
  */
 function injectDynamicContent() {
-  // Header navigation (multiple links)
-  copyJSON.header.nav.forEach((item) => {
-    partials.headerHTML = partials.headerHTML
+  // Navigation (multiple links)
+  copyJSON.nav.forEach((item) => {
+    partials.nav = partials.nav
+      .replace("{{ARIA LABEL}}", item.label)
       .replace("{{LABEL}}", item.label)
       .replace("{{DESTINATION}}", item.link);
   });
+
+  // Header content
+  partials.headerHTML = partials.headerHTML
+    .replace("{{LABEL}}", copyJSON.header.label)
+    .replace("{{DESTINATION}}}", copyJSON.header.link)
+    .replace("<!-- NAV -->", partials.nav)
+    .replace("<!-- HAMBURGER ICON -->", partials.hamburgerIcon);
 
   // Hero section content
   partials.heroSection = partials.heroSection

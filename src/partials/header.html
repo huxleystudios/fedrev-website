@@ -1,45 +1,19 @@
-<header class="header">
+<header
+  class="bg-light sticky-top shadow"
+  role="banner"
+  aria-label="Site Header"
+>
   <div class="container">
-    <div class="header--wrapper flex align-center justify-between">
+    <div class="flex items-center justify-between p-header">
       <!-- LOGO -->
 
-      <a href="#home">
-        <span class="text--logo text--bold text--color-accent">FEDREV</span>
+      <a href="{{DESTINATION}}">
+        <span class="text-logo text-bold text--blue-700">{{LABEL}}</span>
       </a>
 
-      <!-- HAMBURGER -->
-
-      <button
-        class="nav-toggle"
-        aria-label="Toggle navigation"
-        aria-expanded="false"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <!-- HAMBURGER ICON -->
 
       <!-- NAV -->
-
-      <nav class="nav" role="navigation">
-        <ul class="nav-list">
-          <li>
-            <a href="{{DESTINATION}}" class="nav-link">
-              <span class="text--bold text--color-accent">{{LABEL}}</span>
-            </a>
-          </li>
-          <li>
-            <a href="{{DESTINATION}}" class="nav-link">
-              <span class="text--bold text--color-accent">{{LABEL}}</span>
-            </a>
-          </li>
-          <li>
-            <a href="{{DESTINATION}}" class="nav-link">
-              <span class="text--bold text--color-accent">{{LABEL}}</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
     </div>
   </div>
 </header>

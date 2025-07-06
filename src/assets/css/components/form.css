@@ -10,13 +10,13 @@ form {
 legend {
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--color-accent);
+  color: var(--blue-700);
   margin-bottom: 1rem;
 }
 
 label {
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--blue-700);
 }
 
 input,
@@ -34,7 +34,7 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: var(--color-accent);
+  border-color: var(--blue-700);
   box-shadow: 0 0 5px rgba(0, 120, 215, 0.5);
 }
 

@@ -1,38 +1,89 @@
 <form
-  class="flex flex-column gap-sm contact-item animate-in"
+  class="flex flex-col gap-1 animate-fade-up"
+  data-animate-contact-item
   action="https://formspree.io/f/mblypjkp"
   method="POST"
   autocomplete="off"
+  aria-labelledby="contact-form-title"
 >
-  <fieldset class="flex flex-column gap-sm">
+  <h2 class="sr-only" id="contact-form-title">Contact FEDREV</h2>
+
+  <fieldset class="flex flex-col gap-1">
     <legend>Contact Information</legend>
 
-    <div class="flex flex-column gap-sm">
-      <label for="name">Name</label>
-      <input id="name" type="text" name="name" required />
+    <div class="flex flex-col gap-1">
+      <label for="name">Name <span aria-hidden="true">*</span></label>
+      <input
+        id="name"
+        type="text"
+        name="name"
+        inputmode="text"
+        aria-required="true"
+        required
+      />
     </div>
 
-    <div class="flex flex-column gap-sm">
-      <label for="email">Email</label>
-      <input id="email" type="email" name="email" required />
+    <div class="flex flex-col gap-1">
+      <label for="email">Email <span aria-hidden="true">*</span></label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        inputmode="email"
+        aria-required="true"
+        required
+      />
     </div>
 
-    <div class="flex flex-column gap-sm">
-      <label for="businessName">Business Name</label>
-      <input id="businessName" type="text" name="businessName" required />
+    <div class="flex flex-col gap-1">
+      <label for="businessName"
+        >Business Name <span aria-hidden="true">*</span></label
+      >
+      <input
+        id="businessName"
+        type="text"
+        name="businessName"
+        inputmode="text"
+        aria-required="true"
+        required
+      />
     </div>
   </fieldset>
 
-  <fieldset class="flex flex-column gap-sm">
+  <fieldset class="flex flex-col gap-1">
     <legend>Message</legend>
 
-    <div class="flex flex-column gap-sm">
-      <label for="message">How can we assist you?</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+    <div class="flex flex-col gap-1">
+      <label for="message"
+        >How can we assist you? <span aria-hidden="true">*</span></label
+      >
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        aria-required="true"
+        required
+      ></textarea>
     </div>
   </fieldset>
 
+  <input
+    type="text"
+    name="_gotcha"
+    autocomplete="off"
+    tabindex="-1"
+    aria-hidden="true"
+    style="
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      border: 0;
+    "
+  />
+
   <button type="submit" class="btn btn--color-primary">
-    <span class="text--size-md">Send</span>
+    <span class="text-md">Send</span>
   </button>
 </form>

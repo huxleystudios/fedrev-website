@@ -5,26 +5,23 @@
     "cta": "Get Started"
   },
   "header": {
-    "logo": "FEDREV",
-    "nav": [
-      {
-        "label": "About Us",
-        "link": "#about"
-      },
-      {
-        "label": "Our Services",
-        "link": "#services"
-      },
-      {
-        "label": "Contact Us",
-        "link": "#contact"
-      },
-      {
-        "label": "Get Started",
-        "link": "#contact"
-      }
-    ]
+    "label": "FEDREV",
+    "link": "home"
   },
+  "nav": [
+    {
+      "label": "About Us",
+      "link": "about"
+    },
+    {
+      "label": "Our Services",
+      "link": "services"
+    },
+    {
+      "label": "Contact Us",
+      "link": "contact"
+    }
+  ],
   "about": {
     "title": "Keep Your Business Moving",
     "description": "Our mission is simple—make life easier for federal contractors. We manage your invoicing workflows and compliance headaches, so you can focus on delivering great work and winning more contracts, not chasing down payments.",

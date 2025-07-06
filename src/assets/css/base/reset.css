@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  min-width: fit-content;
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  min-width: fit-content;
+  text-align: center;
+  user-select: none;
+}
+
+fieldset {
+  border: none;
+}
+
+li {
+  list-style: none;
+  min-width: fit-content;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+img,
+svg {
+  aspect-ratio: 1 / 1;
+  display: block;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  /* line-height: 1.5; */
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga", "kern";
+}

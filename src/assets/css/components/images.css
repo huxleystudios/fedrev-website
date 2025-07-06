@@ -1,0 +1,14 @@
+.hero-image {
+  max-width: 500px;
+  border-radius: 1rem;
+}
+
+.icon {
+  width: 3rem;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    width: 2.5rem;
+  }
+}
