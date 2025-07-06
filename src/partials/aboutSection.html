@@ -1,25 +1,23 @@
 <section
   id="about"
-  class="flex items-center justify-center min-h-90vh p-section"
+  class="flex items-center justify-center min-h-90vh py-3xl px-xl"
   aria-labelledby="about-heading"
 >
   <div class="container">
-    <div class="grid grid-col-2 md:grid-col-1 gap-2">
-      <div class="flex items-center justify-center">
-        <div class="flex flex-col gap-2">
-          <h2
-            id="about-heading"
-            class="text-xl text-accent animate-fade-up"
-            data-animate-about-item
-          >
-            {{TITLE}}
-          </h2>
-          <p class="text-lg animate-fade-up" data-animate-about-item>
-            {{DESCRIPTION}}
-          </p>
-        </div>
+    <div class="grid grid-col-1 gap-xl lg:grid-col-2">
+      <div class="flex flex-col gap-lg">
+        <h2
+          id="about-heading"
+          class="text-xl text-accent animate-fade-up"
+          data-animate-about-item
+        >
+          {{TITLE}}
+        </h2>
+        <p class="text-lg animate-fade-up" data-animate-about-item>
+          {{DESCRIPTION}}
+        </p>
       </div>
-      <div class="flex items-center justify-center">
+      <div class="lg:flex lg:justify-center">
         <!-- STEPS -->
       </div>
     </div>

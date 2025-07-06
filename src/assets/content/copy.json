@@ -54,7 +54,7 @@
       },
       {
         "title": "Reporting",
-        "description": "We deliver clear, customized reports that give you visibility into submitted, pending, and paid invoices—plus trends and payment timelines."
+        "description": "We deliver clear, customized reports that give you visibility into submitted, pending, and paid invoices."
       },
       {
         "title": "Liaison Support",
@@ -67,7 +67,7 @@
     "description": "Stress-free invoicing is one message away."
   },
   "invoices": {
-    "label": "| Invoice Paid ✅",
+    "label": "Invoice Paid",
     "amounts": ["+$12,500", "+$8,200", "+$19,000"]
   }
 }

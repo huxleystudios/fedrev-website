@@ -30,6 +30,10 @@ body {
   background-color: var(--blue-700);
 }
 
+.bg-red {
+  background-color: var(--red-500);
+}
+
 .bg-light {
   background-color: var(--white);
 }

@@ -4,11 +4,11 @@
 }
 
 .icon {
-  width: 3rem;
+  width: 2.5rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .icon {
-    width: 2.5rem;
+    width: 3rem;
   }
 }

@@ -1,5 +1,5 @@
 <form
-  class="flex flex-col gap-1 animate-fade-up"
+  class="flex flex-col gap-md animate-fade-up"
   data-animate-contact-item
   action="https://formspree.io/f/mblypjkp"
   method="POST"
@@ -8,11 +8,11 @@
 >
   <h2 class="sr-only" id="contact-form-title">Contact FEDREV</h2>
 
-  <fieldset class="flex flex-col gap-1">
+  <fieldset class="flex flex-col gap-md">
     <legend>Contact Information</legend>
 
-    <div class="flex flex-col gap-1">
-      <label for="name">Name <span aria-hidden="true">*</span></label>
+    <div class="flex flex-col gap-md">
+      <label for="name">Name<span aria-hidden="true">*</span></label>
       <input
         id="name"
         type="text"
@@ -23,8 +23,8 @@
       />
     </div>
 
-    <div class="flex flex-col gap-1">
-      <label for="email">Email <span aria-hidden="true">*</span></label>
+    <div class="flex flex-col gap-md">
+      <label for="email">Email<span aria-hidden="true">*</span></label>
       <input
         id="email"
         type="email"
@@ -35,9 +35,9 @@
       />
     </div>
 
-    <div class="flex flex-col gap-1">
+    <div class="flex flex-col gap-md">
       <label for="businessName"
-        >Business Name <span aria-hidden="true">*</span></label
+        >Business Name<span aria-hidden="true">*</span></label
       >
       <input
         id="businessName"
@@ -50,12 +50,12 @@
     </div>
   </fieldset>
 
-  <fieldset class="flex flex-col gap-1">
+  <fieldset class="flex flex-col gap-md">
     <legend>Message</legend>
 
-    <div class="flex flex-col gap-1">
+    <div class="flex flex-col gap-md">
       <label for="message"
-        >How can we assist you? <span aria-hidden="true">*</span></label
+        >How can we assist you?<span aria-hidden="true">*</span></label
       >
       <textarea
         id="message"
@@ -83,7 +83,7 @@
     "
   />
 
-  <button type="submit" class="btn btn--color-primary">
-    <span class="text-md">Send</span>
+  <button type="submit" class="bg-red py-md px-2xl border-radius-2">
+    <span class="text-md text-light text-bold">Send</span>
   </button>
 </form>

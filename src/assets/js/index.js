@@ -1,9 +1,15 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const observeModule = await import("./observer.js");
-  observeModule.observeElements("[data-animate-hero-item]");
-  observeModule.observeElements("[data-animate-about-item]");
-  observeModule.observeElements("[data-animate-service-item]");
-  observeModule.observeElements("[data-animate-contact-item]");
+  const elements = [
+    "[data-animate-hero-item]",
+    "[data-animate-hero-image]",
+    "[data-animate-about-item]",
+    "[data-animate-service-item]",
+    "[data-animate-contact-item]",
+  ];
+  elements.forEach((element) => {
+    observeModule.observeElements(element);
+  });
 
   const navToggleModule = await import("./navToggle.js");
   navToggleModule.initNavToggleOnClick();

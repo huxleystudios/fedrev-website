@@ -38,12 +38,8 @@ body {
   font-size: 1.8rem;
 }
 
-@media (max-width: 768px) {
-  .sm\:text-left {
-    text-align: left;
-  }
-
-  .text-ch30 {
-    max-width: 30ch;
+@media (min-width: 1024px) {
+  .lg\:text-center {
+    text-align: center;
   }
 }

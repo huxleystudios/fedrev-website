@@ -23,7 +23,7 @@ input,
 textarea {
   padding: 0.6rem 0.8rem;
   font-size: 1rem;
-  border: 1.8px solid #ccc;
+  border: 1.8px solid var(--gray-300);
   border-radius: 6px;
   transition: border-color 0.3s ease;
   font-family: inherit;
@@ -36,10 +36,4 @@ textarea:focus {
   outline: none;
   border-color: var(--blue-700);
   box-shadow: 0 0 5px rgba(0, 120, 215, 0.5);
-}
-
-@media (max-width: 768px) {
-  form .btn {
-    width: 100%;
-  }
 }

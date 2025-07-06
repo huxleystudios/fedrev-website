@@ -1,9 +1,30 @@
-<span class="invoice invoice--1" aria-hidden="true" tabindex="-1">
-  {{AMOUNT}} {{LABEL}}
-</span>
-<span class="invoice invoice--2" aria-hidden="true" tabindex="-1">
-  {{AMOUNT}} {{LABEL}}
-</span>
-<span class="invoice invoice--3" aria-hidden="true" tabindex="-1">
-  {{AMOUNT}} {{LABEL}}
-</span>
+<div
+  class="invoice bg-light text-bold py-xs px-md border-radius-1 shadow flex gap-sm animate-pulse delay-1s invoice-1"
+  aria-hidden="true"
+  tabindex="-1"
+>
+  <span>{{AMOUNT}}</span>
+  <span>|</span>
+  <span>{{LABEL}}</span>
+  <span>✅</span>
+</div>
+<div
+  class="invoice bg-light text-bold py-xs px-md border-radius-1 shadow flex gap-sm animate-pulse delay-2s invoice-2"
+  aria-hidden="true"
+  tabindex="-1"
+>
+  <span>{{AMOUNT}}</span>
+  <span>|</span>
+  <span>{{LABEL}}</span>
+  <span>✅</span>
+</div>
+<div
+  class="invoice bg-light text-bold py-xs px-md border-radius-1 shadow flex gap-sm animate-pulse delay-3s invoice-3"
+  aria-hidden="true"
+  tabindex="-1"
+>
+  <span>{{AMOUNT}}</span>
+  <span>|</span>
+  <span>{{LABEL}}</span>
+  <span>✅</span>
+</div>

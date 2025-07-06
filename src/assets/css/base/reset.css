@@ -35,7 +35,6 @@ li {
 
 button,
 input,
-select,
 textarea {
   font: inherit;
 }
@@ -56,8 +55,6 @@ html {
 
 html,
 body {
-  height: 100%;
-  /* line-height: 1.5; */
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

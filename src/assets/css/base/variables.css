@@ -1,8 +1,5 @@
 :root {
   --box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
-  --gap-1: 1rem;
-  --gap-15: 1.5rem;
-  --gap-2: 2rem;
 }
 
 .shadow {
@@ -39,10 +36,4 @@
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
-}
-
-@media (max-width: 1000px) {
-  .md\:hidden {
-    display: none;
-  }
 }

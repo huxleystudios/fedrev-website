@@ -3,33 +3,26 @@
 /* Invoice popup base style */
 .invoice {
   position: absolute;
-  background-color: #fff;
-  color: #1e3a8a;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  box-shadow: var(--box-shadow);
   opacity: 0;
   transform: translateY(20px);
-  animation: pulseInOut 4s ease-in-out infinite;
 }
 
 /* Positioning each invoice separately */
-.invoice--1 {
+.invoice-1 {
   top: 25%;
   left: 5%;
   transform: translateY(-50%);
   animation-delay: 1s;
 }
 
-.invoice--2 {
+.invoice-2 {
   top: 50%;
   right: 5%;
   transform: translateY(-50%);
   animation-delay: 2s;
 }
 
-.invoice--3 {
+.invoice-3 {
   top: 75%;
   left: 5%;
   transform: translateY(-50%);
