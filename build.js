@@ -237,7 +237,7 @@ function injectDynamicContent() {
   // Header content
   partials.headerHTML = partials.headerHTML
     .replace("{{LABEL}}", copyJSON.header.label)
-    .replace("{{DESTINATION}}}", copyJSON.header.link)
+    .replace("{{DESTINATION}}", copyJSON.header.link)
     .replace("<!-- NAV -->", partials.nav)
     .replace("<!-- HAMBURGER ICON -->", partials.hamburgerIcon);
 
