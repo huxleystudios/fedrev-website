@@ -9,7 +9,7 @@
 
 /* Positioning each invoice separately */
 .invoice-1 {
-  top: 25%;
+  top: 20%;
   left: 5%;
   transform: translateY(-50%);
   animation-delay: 1s;
@@ -23,7 +23,7 @@
 }
 
 .invoice-3 {
-  top: 75%;
+  top: 80%;
   left: 5%;
   transform: translateY(-50%);
   animation-delay: 3s;

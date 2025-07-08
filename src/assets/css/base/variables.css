@@ -37,3 +37,12 @@
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+.gotcha {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+}
